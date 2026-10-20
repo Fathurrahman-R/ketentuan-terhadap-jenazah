@@ -1,0 +1,9 @@
+# Konfigurasi Supabase CLI
+project_id = "kuis"
+
+# Edge Function submit-quiz
+# verify_jwt dinonaktifkan (false) agar endpoint dapat dipanggil oleh publik / tamu,
+# baik frontend menggunakan token anon lama (JWT) maupun API key baru (sb_publishable_).
+# Keamanan dijamin lewat validasi ketat, rate limiting (ip_hash), anti-duplikat, dan honeypot.
+[functions.submit-quiz]
+verify_jwt = false
