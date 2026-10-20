@@ -67,7 +67,6 @@
     kuisPercent: document.getElementById("kuis-percent"),
     kuisProgress: document.getElementById("kuis-progress"),
     kuisBar: document.getElementById("kuis-bar"),
-    kuisLabel: document.getElementById("kuis-label"),
     kuisPertanyaan: document.getElementById("kuis-pertanyaan"),
     kuisOpsi: document.getElementById("kuis-opsi"),
     kuisBack: document.getElementById("kuis-back"),
@@ -517,7 +516,6 @@
     const question = QUIZ_DATA.soal[state.quizIndex];
     const number = state.quizIndex + 1;
 
-    els.kuisLabel.textContent = "Soal " + number;
     els.kuisPertanyaan.textContent = question.teks;
 
     const options = document.createDocumentFragment();
@@ -755,7 +753,6 @@
       head.append(make("span", "review-no", "Soal " + no));
       const pill = make("span", "pill " + (item.benar ? "pill-correct" : "pill-wrong"),
         item.benar ? "Benar" : "Salah");
-      head.append(pill);
 
       const questionText = make("h3", "review-question",
         question ? question.teks : "Soal " + no);
@@ -773,7 +770,7 @@
           : "Belum ada pembahasan dari server."
       ));
 
-      row.append(head, questionText, pair, explanation);
+      row.append(head, questionText, pair, explanation, pill);
       reviewFragment.append(row);
     });
     els.reviewList.replaceChildren(reviewFragment);
