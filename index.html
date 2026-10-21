@@ -6,7 +6,7 @@
   <meta name="description" content="Materi dan kuis Pendidikan Agama Islam tentang ketentuan terhadap jenazah.">
   <meta name="theme-color" content="#e6eee3">
   <title>Ketentuan terhadap Jenazah — Materi &amp; Kuis PAI</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23145234'/%3E%3Cpath d='M7 25V15a9 9 0 0 1 18 0v10M12 25v-8a4 4 0 0 1 8 0v8M5 25h22' fill='none' stroke='%23e3b75a' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23104d2f'/%3E%3Cpath d='M7 25V15a9 9 0 0 1 18 0v10M12 25v-8a4 4 0 0 1 8 0v8M5 25h22' fill='none' stroke='%23c9a24b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -82,29 +82,38 @@
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#bg-lattice)"/>
-        <g class="bg-float bg-f1"><g class="bg-drift">
+        <g class="bg-float bg-f1">
           <path d="M5 27V14.5C5 8.7 9.9 4 16 4s11 4.7 11 10.5V27"/>
           <path d="M11 27v-8.2c0-2.8 2.2-5 5-5s5 2.2 5 5V27"/>
           <path d="M3 27h26"/>
-        </g></g>
-        <g class="bg-float bg-f2"><g class="bg-drift">
+        </g>
+        <g class="bg-float bg-f2">
           <path d="M40 0v34"/>
           <rect x="22" y="34" width="36" height="9" rx="4.5"/>
           <path d="M27 43h26l3 38c0 9-8 15-16 15s-16-6-16-15z"/>
           <path d="M40 56c6 8 9 13 9 17a9 9 0 0 1-18 0c0-4 3-9 9-17z"/>
-        </g></g>
+        </g>
       </svg>
     </div>
     <div class="bg-veil" aria-hidden="true"></div>
+    <div class="draft-frame" aria-hidden="true">
+      <span class="crop crop-tl"></span>
+      <span class="crop crop-tr"></span>
+      <span class="crop crop-bl"></span>
+      <span class="crop crop-br"></span>
+    </div>
     <div class="sheet-inner">
+      <div class="doc-strip" aria-hidden="true">
+        <span class="doc-strip-title">Lembar spesifikasi</span>
+        <span>PAI · Fikih</span>
+        <span>Rev. 01 · Okt 2026</span>
+        <span>8 materi · 10 soal</span>
+      </div>
 
       <!-- ============ PEMBUKA ============ -->
       <section id="screen-landing" class="screen" aria-labelledby="judul-landing">
         <div class="landing">
-          <figure class="landing-media">
-            <img src="assets/materi-pengantar.jpg" alt="Interior Masjid Agung Al-Falah dengan kubah hijau, tiang berukir, dan sajadah merah." width="1400" height="788" decoding="async">
-            <figcaption class="landing-credit">Foto: Muhamad Izzul Fiqih / Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Lanskap_Masjid_Agung_Al-Falah.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
-          </figure>
+          <p class="section-code" aria-hidden="true">00 / Ringkasan</p>
 
           <div class="mascot mascot-landing" aria-hidden="true">
             <svg class="mascot-svg" viewBox="0 0 96 112" focusable="false">
@@ -121,8 +130,12 @@
             </svg>
           </div>
 
-          <h1 id="judul-landing" tabindex="-1">Ketentuan terhadap Jenazah</h1>
+          <div class="landing-title">
+            <h1 id="judul-landing" tabindex="-1">Ketentuan terhadap Jenazah</h1>
+          </div>
           <p class="lead">Pengurusan jenazah dalam Pendidikan Agama Islam: dari memandikan sampai penguburan, lengkap dengan kartu ingat dan kuis.</p>
+
+          <button type="button" class="btn btn-primary" id="mulai-btn">Mulai</button>
 
           <ol class="flow">
             <li>Baca 8 bagian materi dan buka kartu ingat.</li>
@@ -130,9 +143,17 @@
             <li>Lihat skor dan pembahasan.</li>
           </ol>
 
-          <p class="intro-meta"><strong>8</strong> bagian materi <span aria-hidden="true">·</span> <strong>13</strong> kartu ingat <span aria-hidden="true">·</span> <strong>10</strong> soal pilihan ganda</p>
+          <dl class="spec-table">
+            <div><dt>Bagian materi</dt><dd>8</dd></div>
+            <div><dt>Kartu ingat</dt><dd>13</dd></div>
+            <div><dt>Soal pilihan ganda</dt><dd>10</dd></div>
+          </dl>
 
-          <button type="button" class="btn btn-primary" id="mulai-btn">Mulai</button>
+          <figure class="landing-media">
+            <p class="figure-tag">Fig. 01 · Interior masjid</p>
+            <img src="assets/materi-pengantar.jpg" alt="Interior Masjid Agung Al-Falah dengan kubah hijau, tiang berukir, dan sajadah merah." width="1400" height="788" decoding="async">
+            <figcaption class="landing-credit">Foto: Muhamad Izzul Fiqih / Wikimedia Commons, <a href="https://commons.wikimedia.org/wiki/File:Lanskap_Masjid_Agung_Al-Falah.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></figcaption>
+          </figure>
         </div>
       </section>
 
@@ -140,6 +161,7 @@
       <section id="screen-identitas" class="screen" aria-labelledby="judul-identitas" hidden>
         <div class="intro-grid">
           <div class="intro-copy">
+            <p class="section-code" aria-hidden="true">01 / Identitas</p>
             <h1 id="judul-identitas" tabindex="-1">Data diri</h1>
             <p class="lead">Nama dan kelas dipakai untuk mencatat hasil kuis.</p>
           </div>
@@ -183,6 +205,7 @@
       <section id="screen-materi" class="screen" aria-labelledby="judul-materi" hidden>
         <div class="screen-head">
           <div class="screen-title">
+            <p class="section-code" aria-hidden="true">02 / Materi</p>
             <h1 id="judul-materi" tabindex="-1">Materi</h1>
             <p class="lead">Delapan bagian singkat. Baca, buka kartu ingat, lalu uji pemahamanmu.</p>
           </div>
@@ -264,6 +287,7 @@
       <section id="screen-kuis" class="screen" aria-labelledby="judul-kuis" hidden>
         <div class="screen-head">
           <div class="screen-title">
+            <p class="section-code" aria-hidden="true">03 / Kuis</p>
             <h1 id="judul-kuis" tabindex="-1">Kuis</h1>
             <p class="lead">Pilih satu jawaban. Kamu boleh kembali dan mengubah jawaban.</p>
           </div>
@@ -321,6 +345,7 @@
 
         <div class="screen-head">
           <div class="screen-title">
+            <p class="section-code" aria-hidden="true">04 / Hasil</p>
             <h1 id="judul-hasil" tabindex="-1">Hasil kuis</h1>
             <p class="lead" id="hasil-subtitle"></p>
           </div>

@@ -7,3 +7,9 @@ project_id = "kuis"
 # Keamanan dijamin lewat validasi ketat, rate limiting (ip_hash), anti-duplikat, dan honeypot.
 [functions.submit-quiz]
 verify_jwt = false
+
+# Edge Function export-hasil
+# verify_jwt dinonaktifkan (false) karena pemanggil adalah Google Apps Script (server-to-server).
+# Autentikasi dilakukan di dalam fungsi menggunakan secret EXPORT_TOKEN (header x-export-token).
+[functions.export-hasil]
+verify_jwt = false
